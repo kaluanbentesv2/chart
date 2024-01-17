@@ -1,0 +1,125 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+
+  & th {
+    padding: 0.8rem 0rem;
+    color: #333;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  & tbody th {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 1%;
+    padding: 0.75rem;
+    padding-left: 0;
+  }
+
+  & td {
+    border-left: 2px solid #b7b7b7;
+    border-right: 2px solid #b7b7b7;
+    vertical-align: center;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+
+    &:first-child {
+      border-bottom: 2px solid #b7b7b7;
+    }
+  }
+
+  & tr:first-child td {
+    border-top: 2px solid #b7b7b7;
+  }
+
+  & tr:last-child td {
+    border-bottom: 2px solid #b7b7b7;
+  }
+
+  & tr:nth-child(odd) {
+    & td {
+      background: #e3dee6;
+    }
+  }
+
+  & tr:nth-child(even) {
+    & td {
+      background: #e8e5eb;
+    }
+  }
+}
+
+tr:nth-child(odd) {
+  & .isNotEligible {
+    background: #e3dba1 !important;
+  }
+}
+
+tr:nth-child(even) {
+  & .isNotEligible {
+    background: #e8e1a4 !important;
+  }
+}
+
+tr:nth-child(odd) {
+  & .isUpdating {
+    background: #a3a0a9 !important;
+  }
+}
+
+tr:nth-child(even) {
+  & .isUpdating {
+    background: #a6a5ac !important;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.average {
+  display: inline-block;
+  transform: translateY(-20px);
+  background: #b7b7b7;
+  color: black;
+  font-size: 1rem;
+  padding: 3px 6px;
+  border-radius: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.isNotEligibleLegendBox {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background: #e7e2c1;
+}
+
+.isUpdatingLegendBox {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background: #b1b1b6;
+}
